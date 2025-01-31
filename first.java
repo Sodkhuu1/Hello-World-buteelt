@@ -25,7 +25,7 @@ public class first{
         System.out.println("Calculates and prints information for a user-supplied radius");
         System.out.println("------------------------------------------------------------");
 
-        System.out.print("Enter the circle's radius: ");
+        System.out.print("Circle iin radiusiig oruulna uu: ");
         Scanner in = new Scanner(System.in);
         double radius = in.nextDouble();
         in.close();
