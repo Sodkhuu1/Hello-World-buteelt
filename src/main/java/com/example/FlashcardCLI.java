@@ -36,7 +36,7 @@ public class FlashcardCLI {
         try {
             cardMap = CardLoader.loadCards(cardFile);
         } catch (IOException e) {
-            System.out.println("Файл уншихад алдаа гарлаа: " + e.getMessage());
+            System.out.println("file unshihad aldaa garlaa: " + e.getMessage());
             return;
         }
 

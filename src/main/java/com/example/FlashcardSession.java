@@ -26,8 +26,8 @@ public class FlashcardSession {
                 String question = invert ? card.getAnswer() : card.getQuestion();
                 String expected = invert ? card.getQuestion() : card.getAnswer();
 
-                System.out.println("Асуулт: " + question);
-                System.out.print("Хариулт: ");
+                System.out.println("Asuult: " + question);
+                System.out.print("Hariult: ");
                 String answer = scanner.nextLine().trim();
 
                 totalAttempts.put(card, totalAttempts.getOrDefault(card, 0) + 1);
@@ -36,11 +36,11 @@ public class FlashcardSession {
                     card.markCorrect();
                     correctAnswers.put(card, correctAnswers.getOrDefault(card, 0) + 1);
                     correctCount++;
-                    System.out.println("✅ Зөв!");
+                    System.out.println("Zuv!");
                 } else {
                     card.markWrong();
                     allCorrect = false;
-                    System.out.println("❌ Буруу. Зөв хариулт: " + expected);
+                    System.out.println("Buruu, zuv hariult: " + expected);
                 }
             }
         }
@@ -48,14 +48,14 @@ public class FlashcardSession {
         long duration = System.currentTimeMillis() - startTime;
         double avgSeconds = duration / 1000.0 / cards.size();
 
-        System.out.println("\n--- Хичээл дууслаа ---");
-        System.out.println("⏱ Дундаж хугацаа: " + String.format("%.2f", avgSeconds) + " секунд");
+        System.out.println("\n--- Hicheel Duuslaa ---");
+        System.out.println("Dundaj he=ugatsaa: " + String.format("%.2f", avgSeconds) + " second");
 
         if (avgSeconds < 5.0) {
-            System.out.println("🏅 Амжилт: FAST LEARNER!");
+            System.out.println("Amjilt: FAST LEARNER!");
         }
         if (allCorrect) {
-            System.out.println("🎉 Амжилт: CORRECT - бүгдийг зөв хариулсан!");
+            System.out.println("🎉 Amjilt: CORRECT - бүгдийг зөв хариулсан!");
         }
         for (Card card : cards) {
             int total = totalAttempts.getOrDefault(card, 0);
@@ -65,7 +65,7 @@ public class FlashcardSession {
                 System.out.println("🔁 Амжилт: REPEAT - " + card.getQuestion());
             }
             if (correct >= 3) {
-                System.out.println("💪 Амжилт: CONFIDENT - " + card.getQuestion());
+                System.out.println("💪 Amjilt: CONFIDENT - " + card.getQuestion());
             }
         }
     }
