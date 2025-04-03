@@ -1,5 +1,7 @@
 package com.example;
 
-public class CardOrganizer {
-    
+import java.util.*;
+
+public interface CardOrganizer {
+    List<Card> organize(List<Card> cards);
 }
