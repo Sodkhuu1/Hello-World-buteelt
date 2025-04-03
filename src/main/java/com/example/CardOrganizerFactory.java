@@ -1,5 +1,8 @@
 package com.example;
 
+import java.util.Collections;
+import java.util.List;
+
 public class CardOrganizerFactory {
     public static CardOrganizer create(String order) {
         switch (order) {
@@ -11,8 +14,11 @@ public class CardOrganizerFactory {
                     return cards;
                 };
             default:
-                Collections.shuffle(cards);
-                return (cards) -> cards;
+                return (cards) -> {
+                    Collections.shuffle(cards);
+                    return cards;
+                };
         }
     }
 }
+

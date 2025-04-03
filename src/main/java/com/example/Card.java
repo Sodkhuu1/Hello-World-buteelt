@@ -1,5 +1,9 @@
 package com.example;
 
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Card {
     private String question;
     private String answer;
