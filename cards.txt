@@ -2,3 +2,4 @@ What is the capital of France?::Paris
 2 + 2 = ?::4
 Who wrote '1984'?::George Orwell
 What color is the sky?::Blue
+2 iin 10 zereg?::1024
